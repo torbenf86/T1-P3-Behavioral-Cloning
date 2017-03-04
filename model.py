@@ -52,14 +52,10 @@ model.add(Dense(50))
 model.add(Dense(10))
 model.add(Dense(1))
 
-# Model visualization
-from keras.utils.visualize_util import plot
-plot(model, to_file='model.png')
-
 model.compile(optimizer='adam',loss='mse')
 history_object  = model.fit(X_train, y_train,  validation_split=0.2, shuffle=True, nb_epoch=7, verbose = 2)
 
-model.save('model5.h5')
+model.save('model.h5')
 print("Model saved!")
 
 
